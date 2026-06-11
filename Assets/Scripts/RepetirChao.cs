@@ -22,10 +22,16 @@ public class RepetirChao : MonoBehaviour
             {
                 _chaoInstanciado = true;
                 GameObject ObjetoTemporarioChao = Instantiate(_gameController._chaoPrefab);
-                ObjetoTemporarioChao.transform.position = new Vector3(transform.position.x + _gameController._chaoTamanho, transform.position.y, 0);
+                ObjetoTemporarioChao.transform.position = new Vector3(transform.position.x + 
+                    _gameController._chaoTamanho, transform.position.y, 0);
 
                 Debug.Log("O chão foi instanciado!");
             }
+        }
+
+        if (transform.position.x < _gameController._chaoDestruido) // -38
+        {
+            Destroy(this.gameObject);
         }
     }
 

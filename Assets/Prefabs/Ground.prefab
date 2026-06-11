@@ -104,3 +104,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46caf9473da39364590228b941f41a84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RepetirChao
+  _chaoInstanciado: 0
