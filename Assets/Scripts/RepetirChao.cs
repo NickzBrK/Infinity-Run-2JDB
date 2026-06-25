@@ -4,29 +4,33 @@ public class RepetirChao : MonoBehaviour
 {
     private GameController _gameController;
 
-    public bool _chaoInstanciado = false;
+
+    public bool _chaoInstaciado = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        // Associando o _gameControler ao objeto GameController
+
+        // Associando o _gameController ao objeto GameController
         _gameController = FindAnyObjectByType(typeof(GameController)) as GameController;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (_chaoInstanciado == false)
+        if (_chaoInstaciado == false)
         {
             if (transform.position.x <= 0)
             {
-                _chaoInstanciado = true;
-                GameObject ObjetoTemporarioChao = Instantiate(_gameController._chaoPrefab);
-                ObjetoTemporarioChao.transform.position = new Vector3(transform.position.x + 
+                _chaoInstaciado = true;
+                GameObject ObjetoTeporarioChao = Instantiate(_gameController._chaoPrefab);
+
+                ObjetoTeporarioChao.transform.position = new Vector3(transform.position.x +
                     _gameController._chaoTamanho, transform.position.y, 0);
 
                 Debug.Log("O chão foi instanciado!");
             }
+
         }
 
         if (transform.position.x < _gameController._chaoDestruido) // -38
@@ -34,7 +38,6 @@ public class RepetirChao : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-
     void FixedUpdate()
     {
         MoveChao();
@@ -42,7 +45,7 @@ public class RepetirChao : MonoBehaviour
 
     void MoveChao()
     {
-        // Translate => move objeto pare os lados
+        // Translate => Move obejeto para os lados 
         transform.Translate(Vector2.left * _gameController._chaoVelocidade * Time.deltaTime);
     }
 }

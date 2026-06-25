@@ -370,9 +370,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameController
   _chaoDestruido: -38
-  _chaoTamanho: 40
+  _chaoTamanho: 39
   _chaoVelocidade: 5
-  _chaoPrefab: {fileID: 1674187132}
+  _chaoPrefab: {fileID: 3932876179400802427, guid: b5e56391af731604f930625cbcd8611a, type: 3}
 --- !u!4 &1469814520
 Transform:
   m_ObjectHideFlags: 0
@@ -388,11 +388,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1674187132 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3932876179400802427, guid: b5e56391af731604f930625cbcd8611a, type: 3}
-  m_PrefabInstance: {fileID: 3313336915371840190}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3313336915371840190
 PrefabInstance:
   m_ObjectHideFlags: 0
